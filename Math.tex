@@ -1,0 +1,239 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\setlength{\topmargin}{0pt}
+\setlength{\textheight}{9in}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\oddsidemargin}{0.25in}
+\setlength{\textwidth}{6in}
+\pagestyle{plain}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\raisebox{0.6in}[0in]{\makebox[\textwidth][r]{\it
+ Math}}
+\vspace{-0.7in}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+\bf\large IST718 Big Data Analysis
+\end{center}
+
+\noindent
+Lecturer:                Prof. Daniel Acuna
+\hfill
+Lecture \#               1 \& 2
+\\
+Scribe:                  Lizhen Liang \& Yimin Xiao
+\hfill
+                         1/15/2019
+
+\noindent
+\rule{\textwidth}{1pt}
+
+\medskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% body of scribe notes goes here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Algebra}
+
+\subsection{Scalar}
+The representation of a single number  \newline\newline
+i.e.\\
+\begin{align*}
+\alpha = 0.1\\
+\beta = 0.5
+\end{align*}
+
+\subsection{Notation}
+We let $\textbf X$ denote a $n \times p$ matrix whose $(i,j)$th element is $x_{ij}$. That is:  \newline
+
+$$
+\textbf X = \begin{bmatrix} x_{11}&x_{12}&\cdots&x_{1p}\\ x_{21}&x_{22}&\cdots&x_{2p}\\ 
+\vdots&\vdots&\ddots&\vdots\\ x_{n1}&x_{n2}&\cdots&x_{np}\\ \end{bmatrix}
+$$\newline
+
+A matrix is an arrangement of scalars. You can think of it as a spreadsheet with $n$ rows and $p$\newline\newline
+
+The rows of $\textbf X$ can be written as $x_1, x_2,...,x_n$. Here $x_i$ is a vector of length $p$, containing the $p$ variable measurements for the $i$th observation. That is,  
+$$x_i = \begin{pmatrix} x_{i1}\\ x_{i2} \\ \vdots\\ x_{ip}\\ \end{pmatrix}$$\newline
+
+IMPORTANT: vectors are by default represented as columns.\newline\newline
+
+The columns of $\textbf X$ can written as $x_1, x_2,...,x_p$. Each is a vector of length $n$. That is,  \newline
+
+$${\scriptsize \textbf X_j} = \begin{pmatrix} x_{1j}\\ x_{2j} \\ \vdots\\ x_{nj}\\ \end{pmatrix}$$ \newline\newline
+
+Using the previous notation, the matrix $\textbf X$ can be written as  \newline
+
+\begin{align*}
+\textbf X = \begin{pmatrix} {\scriptsize \textbf X_1}&{\scriptsize \textbf X_2}&\cdots&{\scriptsize \textbf X_p}\\ \end{pmatrix}
+\quad or \quad
+\textbf X = \begin{pmatrix} x_1^T\\ x_2^T \\ \vdots\\ x_n^T\\ \end{pmatrix}
+\end{align*}
+
+\subsubsection{Transpose}
+
+The $\;^T\;$ notation denotes the \textbf{transpose} of a matrix or vector. So, for example,
+
+$$\textbf X^T = \begin{bmatrix} x_{11}&x_{21}&\cdots&x_{n1}\\ x_{12}&x_{22}&\cdots&x_{n2}\\ 
+\vdots&\vdots&\ddots&\vdots\\ x_{1p}&x_{2p}&\cdots&x_{np}\\ \end{bmatrix}$$\newline
+
+\centering while  
+
+$$x_i^T = \begin{pmatrix} x_{i1}&x_{i2}&\cdots&x_{ip}\\ \end{pmatrix}$$
+
+We use $y_i$ to denote the $i$th observation of the variable on wish we wish to make predictions. Hence we write the set of all $n$ observations in *vector form* as  
+
+$$\textbf y = \begin{pmatrix} y_1\\ y_2 \\ \vdots\\ y_n\\ \end{pmatrix}$$
+
+Then our observed data consist of $\{(x_1,y_1), (x_2,y_2),...,(x_n,y_n)\}$, where each $x_i$ is a vector of length $p$.
+If $p=1$, then $x_i$ is simply a scalar.
+
+We use $y_i$ to denote the $i$th observation of the variable on wish we wish to make predictions. Hence we write the set of all $n$ observations in *vector form* as  
+
+$$\textbf y = \begin{pmatrix} y_1\\ y_2 \\ \vdots\\ y_n\\ \end{pmatrix}$$
+
+Then our observed data consist of $\{(x_1,y_1), (x_2,y_2),...,(x_n,y_n)\}$, where each $x_i$ is a vector of length $p$.
+If $p=1$, then $x_i$ is simply a scalar.\newline 
+
+\begin{flushleft}
+\subsection{Matrix}
+We can define a matrix by its components as follows
+$\textbf A=(f(i,j))_{ij}$where $f(i, j)$ is a function of $i$ and $j$.\newline 
+
+\textbf{For example}, define the matrix 
+
+$$
+\textbf X = 
+\begin{bmatrix} 
+1 & 1 & \cdots & 1\\ 
+0 & 1 & \cdots & 1\\ 
+\vdots&\vdots&\ddots&\vdots\\ 0& 0 & \cdots & 1\\ 
+\end{bmatrix}
+$$
+
+using a function: \newline
+\begin{align*}
+    f(i, j) = 1 \quad when\quad j >= i \\
+    otherwise,\quad f(i, j)=0
+\end{align*}
+\end{flushleft}
+
+\begin{flushleft}
+\subsubsection{Matrix operations}
+Scalar times matrix: $\alpha \textbf A=(\alpha \times a_{ij} )_{ij}$\newline
+Matrix addition: $\textbf A + \textbf B $ (add each element one at a time)\newline
+Matrix multiplication: $\textbf A \textbf B$ ($\text{cols}_A = \text{rows}_B$)
+$$\textbf A \textbf B=\left(\sum_{z} a_{iz} b_{zj}\right)_{ij}$$
+Matrix transposition: make rows the columns
+$$\textbf{A}^T=(a_{ij} )_{ji}$$
+Many operations can be easily written as matrices\newline
+
+\subsubsection{Special Matrix Properties}
+Identity matrix (diagonal values are 1, everything else is 0)\newline
+\begin{align*}
+    I = \begin{bmatrix} 1&\cdots&0\\ \vdots&\ddots&\vdots\\ 0&\cdots&1\\ \end{bmatrix}
+\end{align*}
+
+Matrix inverse: $AA^{−1}=I$ \newline
+Matrix addition is commutative: $A + B = B + A$ \newline
+Matrix multiplication is NOT commutative: $AB \neq BA$
+$(AB)^T=B^T A^T$
+\newline
+\subsubsection{Dimension}
+To indicate that an object is: \newline
+\begin{itemize}
+    \item[-] a scalar, we will use the notation $a \in \mathbb{R}$  
+    \item[-] a vector of length $n$, we will use $\textbf a \in \mathbb{R^n}$ 
+    \item[-] a vector of length $k$, we will use $a \in \mathbb{R^k}$ 
+    \item[-] a $r \times s$ matrix, we will use $\textbf A \in \mathbb{R}^{r \times s}$ 
+\end{itemize}
+
+\subsection{Application}
+Model 1: \newline
+\begin{itemize}
+  \item[-] $\widehat{income}=f(age)= 20000+5000 \times age$
+  \item[-] The unit of the intercept is different from the unit of the slope
+  \item[-] Using matrix notation to make predictions for $age = \{20, 25, 40\}$
+  \item[-] Represent model as a vector $b = \begin{pmatrix} 20000\\ 5000\\ \end{pmatrix}$
+  \item[-] Represent data as matrix $X$
+  \item[-] Making predictions: $X \times b$
+\end{itemize}
+
+\subsection{Optimization}
+Define the loss as a function of the model's parameters and we try to minize it:
+$$
+\widehat{\Theta} = \arg \min_\Theta L(\Theta)
+$$\newline
+We can find a minimum or maximum of a function by looking at the slope \newline
+Finding the minimum of a function:
+$$
+\frac{df(x)}{dx}=0
+$$
+
+In multiple dimensions it is called a gradient:
+$$
+g = {\begin{pmatrix} \frac{df(x_1)}{dx_1} \frac{df(x_2)}{dx_2} \cdots \frac{df(x_p)}{dx_p}\\ \end{pmatrix}}^T
+$$
+
+\subsubsection{Derivatives}
+Definition of the derivative:
+$$
+\frac{df(x)}{d(x)} \approx \lim\limits_{\Delta x \to 0} {\frac {f(x+\Delta x)-f(x)}{\Delta x}}
+$$
+Which means that the infinitesimal change in the function as the change is taken to zero
+$$i.e.$$
+  $$f_1(x) = a + xb$$
+  $$f_2(x) = x^2$$
+
+\subsubsection*{Common derivation rules}
+Chain rule:
+$$
+{\textstyle \frac{dg(f(x)}{dx}= \frac{dg(f)}{f}\frac{df(x)}{x}}
+$$
+
+\leftline{Other rules:}
+\centering
+$\frac{d(cf(x))}{dx}= c\frac{df(x)}{dx}$   \\
+\quad \\ \quad\quad
+$\frac{d(f(x)+g(x))}{dx}=\frac{d(f(x))}{dx}+\frac{g(g(x))}{dx}$ \\
+\quad \\
+\quad\quad\quad\quad\quad\quad\quad\quad\quad
+$\frac{d(x^n)}{dx}=nx^{n-1}$ 
+\newline
+
+\leftline{Common properties:}
+${\displaystyle \frac{d(e^x)}{dx}= e^x}$ \\
+${\displaystyle \frac{d(\log(x))}{dx}=\frac{1}{x}}$ \\
+\end{flushleft}
+
+\begin{flushleft}
+\subsection{Loss Function}
+\leftline{A common prediction function for probability values is the sigmoid:}
+\quad \\
+$$\sigma(z)=\frac{1}{1+e^{−z}}$$
+
+\leftline{Logistic regression has a loss function called *cross-entropy*:}
+$$l(z) = -y\log(\sigma(z)) - (1−y)\log⁡(1−\sigma(z))$$
+
+\end{flushleft}
+
+\begin{flushleft}
+\section{Probability}
+\subsection{Set}
+The collection of all possible outcomes in an experiment is called \textbf{sample space}
+\end{flushleft}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
