@@ -1,7 +1,7 @@
 # Lectures notes for Big Data Analytics (IST 718)
 
 - Professor: Daniel Acuna <https://acuna.io>
-- Scribers: Lizhan Liam and Yimin Xiao
+- Scribers: Lizhen Liang and Yimin Xiao
 
 
 ## Contents
