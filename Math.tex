@@ -2,6 +2,9 @@
 
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{hyperref}
 
 \setlength{\topmargin}{0pt}
 \setlength{\textheight}{9in}
@@ -221,7 +224,7 @@ ${\displaystyle \frac{d(\log(x))}{dx}=\frac{1}{x}}$ \\
 \quad \\
 $$\sigma(z)=\frac{1}{1+e^{−z}}$$
 
-\leftline{Logistic regression has a loss function called *cross-entropy*:}
+\leftline{Logistic regression has a loss function called \textbf{cross-entropy}:}
 $$l(z) = -y\log(\sigma(z)) - (1−y)\log⁡(1−\sigma(z))$$
 
 \end{flushleft}
@@ -229,7 +232,95 @@ $$l(z) = -y\log(\sigma(z)) - (1−y)\log⁡(1−\sigma(z))$$
 \begin{flushleft}
 \section{Probability}
 \subsection{Set}
-The collection of all possible outcomes in an experiment is called \textbf{sample space}
+The collection of all possible outcomes in an experiment is called \textbf{sample space} \newline
+\quad \newline
+\textbf{For example:} \newline
+The sample space of any possible outcome for rolling a dice: \newline
+$$
+    S = \{1, 2, 3, 4, 5, 6\}
+$$
+
+The sample space of any possible outcome for flipping a coin: \newline
+$$
+    S = \{head, tail\}
+$$
+\subsection{Probability}
+Any function that follows the following axioms is a \textbf{probability distribution} \newline
+\quad \newline
+1. Probability of any event is greater or equal to zero \newline
+\quad
+$$p(A) \geq 0$$
+2. If an event $S$ is certain to occur, then:   
+$$p(S) = 1$$
+3. The probability of an infinite number of independent events $A, B, C,\ldots$ is the sum of the probability of each event:  
+$$p(A) + p(B) + p(C) + \ldots$$  
+\subsubsection{Properties}
+For event $A$,  \newline
+\quad
+$$p(\lnot{A}) = 1 - p(A)$$ \\ 
+For any two events $A$ and $B$,  \newline
+\quad 
+$$p(A \cup B) = p(A) + p(B) - p(A \cap B)$$  
+
+Conditional probability (probability of an event knowing that another event is certain)  \newline
+\quad 
+$$p(A \mid B) = P(A \cap B) / P(B)$$
+\quad \newline
+\textbf{Example:}\href{https://www.montyhallproblem.com/}{The Monty Hall Problem}
+
+\subsection{Distribution}
+We only need to deal with two kinds of distributions:
+\begin{itemize}
+    \item [-] Discrete distribution
+    \item [-] Continues distribution 
+\end{itemize}
+\textbf{Real variable}: A random variable is a real-valued function that is defined on a sample space of an experiment. The distribution of a random variable is the probability of the events underlying the random variable. \newline
+\quad \newline
+\textbf{Support set}: a set of conditions or restrains of $x$ that makes $p(x) > 0$ \newline
+\quad \newline
+\textbf{discrete random variable}: the random variable $X$ can take on a finite number of $k$ different values $x_1, ... x_k$ or, an infinite sequence of them. \newline
+\quad \newline 
+\textbf{discrete probability distribution}: Describes the probability of each real value $x$ of a discrete random variable: $$ p(X = x)$$sometimes denoted simply as $p(x)$.\\ The sum of all events must sum up to 1:\\ \quad  $$\sum_x p(x) = 1$$ 
+$p$ is also call a \textbf{probability mass function}
+
+\quad \newline 
+\textbf{continuous random variables}: Random variables that can take on every value on a bounded closed intervals $[a,b]$:
+$$p(a \leq X \leq b) = \int_a^b p(x) dx$$
+with properties: \newline
+\begin{itemize}
+    \item[-] $p(x) \geq 0$ for all $x$
+    \item[-] $\int_{-\infty}^{\infty}p(x) = 1$
+    \item[-] A single point in a continuous distribution has probability 0
+    \item[-] $p$ is called a \textbf{probability density function}
+\end{itemize}
+
+\section{Common Statistics}
+\textbf{Expectation}: A fancy way to express \textbf{average}
+$$E[f(x)] = \sum_x p(x) f(x) \quad E[f(x)] = \int_x p(x) f(x) dx $$
+\textbf{Variance}: The property describing how the data spread around the average of the data set:
+$$Var[f(x)] = E[ (f(x) - E[f(x)])^2 ]$$
+\textbf{Covariance}: Co-spread of two data set:
+$$Cov(f(x), g(y)) = E[(f(x) - E[f(x)])(g(y) - E[g(y)])]$$
+\textbf{joint-distributions}: The joint distribution of a set of random variables
+$$p(X_1 \in C_1, X_2 \in C_2, \dots, X_k \in C_k)$$
+can be read as the probability that the random variables are simultaneously in the intervals $C_1, \dots, C_k$\\
+\quad \\
+\textbf{Marginal probability}: \\ \quad \\
+From a simple example distribution 
+$$p(X_1 \in C_1, X_2 \in C_2)$$
+we can obtain the following 
+$$p(X_1 \in C_1) = \sum_{x_2 \in C_2} p(X_1 = x_1, X_2 = x_2)$$
+for a discrete distribution, and
+$$p(X_1 \in C_1) = \int_{x_2 \in C_2} p(X_1 = x_1, X_2 = x_2) dx_2$$
+for a continous distribution.\\
+This can be generalized for many variables.
+
+\textbf{Conditional probability}:
+$$p(X_1 \in C_1 \mid X_2 \in C_2) = \frac{p(X_1 \in C_1 , X_2 \in C_2)}{p(X_2 \in C_2)} $$
+
+\textbf{Independence}:If two random events are independent (they don't depend on each other), their joint probability can be expressed as the factor of their distributions:
+$$p(X_1 \in C_1,  X_2 \in C_2) = p(X_1 \in C_1) p(X_2 \in C_2)$$
+
 \end{flushleft}
 
 
