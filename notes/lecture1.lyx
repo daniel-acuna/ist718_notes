@@ -212,12 +212,93 @@ medskip
 \end_layout
 
 \begin_layout Section
+About the cource
+\end_layout
+
+\begin_layout Subsection
+Objectives
+\end_layout
+
+\begin_layout Itemize
+Develop predictive models that are interptrable.
+\end_layout
+
+\begin_layout Itemize
+Understand oppotunities / challenges of big data.
+\end_layout
+
+\begin_layout Itemize
+Understanding why / how big data increases accuracy but lowers interpretability.
+\end_layout
+
+\begin_layout Itemize
+Understand the statistical bias, variance, and intrisic noise.
+\end_layout
+
+\begin_layout Itemize
+Understand model fitting, selection, and estimation of generalization error.
+\end_layout
+
+\begin_layout Subsection
+Course content
+\end_layout
+
+\begin_layout Itemize
+1 / 4 of the course covers prerequisite skills required for big data analytics:
+ python programming, linear algebra, calculus and statistics.
+\end_layout
+
+\begin_layout Itemize
+1 / 4 of the course covers the Spark and Hadoop, providing skills required
+ to perform big data analytics.
+\end_layout
+
+\begin_layout Itemize
+1 / 4 of the course consists of case studies, where you apply your skills
+ and knowledge to real-world applications.
+\end_layout
+
+\begin_layout Itemize
+1 / 4 of the course consists of a project, where you work in groups in real
+ world application.
+\end_layout
+
+\begin_layout Subsection
+Focus
+\end_layout
+
+\begin_layout Section
 What is data science?
 \end_layout
 
 \begin_layout Standard
+With the goal of using data to make decisions and drive actions, data science
+ is a combination of:
+\end_layout
+
+\begin_layout Itemize
+Information / computer science
+\end_layout
+
+\begin_layout Itemize
+Mathematics
+\end_layout
+
+\begin_layout Itemize
+Statistics
+\end_layout
+
+\begin_layout Itemize
+Research / Management Science
+\end_layout
+
+\begin_layout Itemize
+Domain Knowledge
+\end_layout
+
+\begin_layout Standard
 According to the Venn Diagram, data science is the overlapping area of hacking
- skills, math & statistics knowledge and domain knowledge
+ skills, math & statistics knowledge and domain knowledge:
 \end_layout
 
 \begin_layout Standard
@@ -250,10 +331,6 @@ Venn diagram of data science
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -264,19 +341,20 @@ The “classic” and “new” kinds of data science
 \end_layout
 
 \begin_layout Standard
-The âclassicâ kind of data science means a bunch of experts in charge of
- creating relatively small and interpretable models and providing features
+The classic kind of data science means a bunch of experts, in charge of
+ creating relatively small and interpretable models, providing features
  to describe the dataset or do predictions.
- The accuracy of the models created by âclassicâ data scientist cannot be
+ The accuracy of the models created by classic data scientist cannot be
  proved.
 \end_layout
 
 \begin_layout Standard
-By contrast, the ânewâ kind of data science need no expert.
+By contrast, the new kind of data science need no expert for a certain domain.
  Models are generalized and takes data with features of low level.
- For example, in old days, experts generate features that can describe transacti
-on data, while nowadays experts simply use the raw transaction data as the
- input data for the model.
+ For example, in old days, experts generate features from raw transaction
+ data that describes a credit card user.
+ But nowadays, experts simply use the raw transaction data as the input
+ data for the model.
 \end_layout
 
 \begin_layout Standard
@@ -309,19 +387,30 @@ three V
 \end_layout
 
 \begin_layout Standard
-Big data is usually stored in a distributed system with no structure.
+Since big data are usually too big to store on a single system, too fast
+ to be pocessed by a single computer and too complex for traditional processing
+ techniques, big data are usually stored and processed on a distributed
+ system.
 \end_layout
 
 \begin_layout Section
 Example for big data applications
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 Recommendation system
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 Activity recognition
+\end_layout
+
+\begin_layout Itemize
+Image recogniiton
+\end_layout
+
+\begin_layout Itemize
+Speech recognition
 \end_layout
 
 \end_body
