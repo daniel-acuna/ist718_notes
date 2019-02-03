@@ -1,0 +1,2687 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{0.6in}[0in]{
+\backslash
+makebox[
+\backslash
+textwidth][r]{
+\backslash
+it  Math}} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.7in} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+bf
+\backslash
+large IST718 Big Data Analysis 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent 
+\end_layout
+
+\begin_layout Plain Layout
+
+Lecturer:                Prof.
+ Daniel Acuna 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill Lecture 
+\backslash
+#               2 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Scribe:                  Lizhen Liang 
+\backslash
+& Yimin Xiao 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill                          1/15/2019
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent 
+\backslash
+rule{
+\backslash
+textwidth}{1pt}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+medskip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Algebra
+\end_layout
+
+\begin_layout Subsection
+Scalar
+\end_layout
+
+\begin_layout Standard
+The representation of a single number
+\end_layout
+
+\begin_layout Standard
+i.e.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+alpha = 0.1$$
+\end_layout
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+beta = 0.5$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Notation
+\end_layout
+
+\begin_layout Standard
+We let 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$X$
+\end_layout
+
+\end_inset
+
+ denote a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$n 
+\backslash
+times p$
+\end_layout
+
+\end_inset
+
+ matrix whose whose 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(i,j)$
+\end_layout
+
+\end_inset
+
+th element is 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$x_{ij}$
+\end_layout
+
+\end_inset
+
+.
+ That is:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$ 
+\backslash
+textbf X = 
+\backslash
+begin{bmatrix} x_{11}&x_{12}&
+\backslash
+cdots&x_{1p}
+\backslash
+
+\backslash
+ x_{21}&x_{22}&
+\backslash
+cdots&x_{2p}
+\backslash
+
+\backslash
+  
+\backslash
+vdots&
+\backslash
+vdots&
+\backslash
+ddots&
+\backslash
+vdots
+\backslash
+
+\backslash
+ x_{n1}&x_{n2}&
+\backslash
+cdots&x_{np}
+\backslash
+
+\backslash
+ 
+\backslash
+end{bmatrix} $$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A matrix is an arrangement of scalars.
+ You can think of it as a spreadsheet with 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$n$
+\end_layout
+
+\end_inset
+
+ rows and 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$p$
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The rows of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+textbf X$
+\end_layout
+
+\end_inset
+
+ can be written as 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$x_1, x_2,...,x_n$
+\end_layout
+
+\end_inset
+
+.
+ Here 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$x_i$
+\end_layout
+
+\end_inset
+
+ is a vector of length 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$p$
+\end_layout
+
+\end_inset
+
+, containing the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$p$
+\end_layout
+
+\end_inset
+
+ variable measurements for the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$i$
+\end_layout
+
+\end_inset
+
+th observation.
+ That is,
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$x_i = 
+\backslash
+begin{pmatrix} x_{i1}
+\backslash
+
+\backslash
+ x_{i2} 
+\backslash
+
+\backslash
+ 
+\backslash
+vdots
+\backslash
+
+\backslash
+ x_{ip}
+\backslash
+
+\backslash
+ 
+\backslash
+end{pmatrix}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+IMPORTANT: vectors are by default represented as columns.
+\backslash
+newline
+\backslash
+newline
+\end_layout
+
+\begin_layout Standard
+The columns of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+textbf X$
+\end_layout
+
+\end_inset
+
+ can written as 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$x_1, x_2,...,x_p$
+\end_layout
+
+\end_inset
+
+.
+ Each is a vector of length 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$n$
+\end_layout
+
+\end_inset
+
+.
+ That is,
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$${
+\backslash
+scriptsize 
+\backslash
+textbf X_j} = 
+\backslash
+begin{pmatrix} x_{1j}
+\backslash
+
+\backslash
+ x_{2j} 
+\backslash
+
+\backslash
+ 
+\backslash
+vdots
+\backslash
+
+\backslash
+ x_{nj}
+\backslash
+
+\backslash
+ 
+\backslash
+end{pmatrix}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using the previous notation, the matrix 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+textbf X$
+\end_layout
+
+\end_inset
+
+ can be written as
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{align*} 
+\backslash
+textbf X = 
+\backslash
+begin{pmatrix} {
+\backslash
+scriptsize 
+\backslash
+textbf X_1}&{
+\backslash
+scriptsize 
+\backslash
+textbf X_2}&
+\backslash
+cdots&{
+\backslash
+scriptsize 
+\backslash
+textbf X_p}
+\backslash
+
+\backslash
+ 
+\backslash
+end{pmatrix} 
+\backslash
+quad or 
+\backslash
+quad 
+\backslash
+textbf X = 
+\backslash
+begin{pmatrix} x_1^T
+\backslash
+
+\backslash
+ x_2^T 
+\backslash
+
+\backslash
+ 
+\backslash
+vdots
+\backslash
+
+\backslash
+ x_n^T
+\backslash
+
+\backslash
+ 
+\backslash
+end{pmatrix} 
+\backslash
+end{align*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Transpose
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+;^T
+\backslash
+;$
+\end_layout
+
+\end_inset
+
+ notation denotes the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{transpose}
+\end_layout
+
+\end_inset
+
+ of a matrix or vector.
+ So, for example,
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$ 
+\backslash
+textbf X = 
+\backslash
+begin{bmatrix} x_{11}&x_{12}&
+\backslash
+cdots&x_{1p}
+\backslash
+
+\backslash
+ x_{21}&x_{22}&
+\backslash
+cdots&x_{2p}
+\backslash
+
+\backslash
+  
+\backslash
+vdots&
+\backslash
+vdots&
+\backslash
+ddots&
+\backslash
+vdots
+\backslash
+
+\backslash
+ x_{n1}&x_{n2}&
+\backslash
+cdots&x_{np}
+\backslash
+
+\backslash
+ 
+\backslash
+end{bmatrix} $$
+\backslash
+newline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+while
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$x_i^T = 
+\backslash
+begin{pmatrix} x_{i1}&x_{i2}&
+\backslash
+cdots&x_{ip}
+\backslash
+
+\backslash
+ 
+\backslash
+end{pmatrix}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We use 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$y_i$
+\end_layout
+
+\end_inset
+
+ to denote the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$i$
+\end_layout
+
+\end_inset
+
+th observation of the variable on wish we wish to make predictions.
+ Hence we write the set of all 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$n$
+\end_layout
+
+\end_inset
+
+ observations in vector form as
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$x_i = 
+\backslash
+begin{pmatrix} x_{i1}
+\backslash
+
+\backslash
+ x_{i2} 
+\backslash
+
+\backslash
+ 
+\backslash
+vdots
+\backslash
+
+\backslash
+ x_{ip}
+\backslash
+
+\backslash
+ 
+\backslash
+end{pmatrix}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then our observed data consist of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+{(x_1,y_1), (x_2,y_2),...,(x_n,y_n)
+\backslash
+}$
+\end_layout
+
+\end_inset
+
+, where each 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$x_i$
+\end_layout
+
+\end_inset
+
+ is a vector of length 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$p$
+\end_layout
+
+\end_inset
+
+.
+ If 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$p=1$
+\end_layout
+
+\end_inset
+
+, then 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$x_i$
+\end_layout
+
+\end_inset
+
+ is simply a scalar.
+\end_layout
+
+\begin_layout Subsection
+Matrix
+\end_layout
+
+\begin_layout Standard
+We can define a matrix by its components as follows 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+textbf A=(f(i,j))_{ij}$
+\end_layout
+
+\end_inset
+
+where 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f(i, j)$
+\end_layout
+
+\end_inset
+
+ is a function of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$i$
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$j$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+For example,
+\emph default
+ define the matrix:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$ 
+\backslash
+textbf X =  
+\backslash
+begin{bmatrix}  1 & 1 & 
+\backslash
+cdots & 1
+\backslash
+
+\backslash
+  0 & 1 & 
+\backslash
+cdots & 1
+\backslash
+
+\backslash
+  
+\backslash
+vdots&
+\backslash
+vdots&
+\backslash
+ddots&
+\backslash
+vdots
+\backslash
+
+\backslash
+ 0& 0 & 
+\backslash
+cdots & 1
+\backslash
+
+\backslash
+  
+\backslash
+end{bmatrix} $$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+using a function:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{align*}     f(i, j) = 1 
+\backslash
+quad when
+\backslash
+quad j >= i 
+\backslash
+
+\backslash
+     otherwise,
+\backslash
+quad f(i, j)=0 
+\backslash
+end{align*} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Matrix operations
+\end_layout
+
+\begin_layout Standard
+Scalar times matrix: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+alpha 
+\backslash
+textbf A=(
+\backslash
+alpha 
+\backslash
+times a_{ij} )_{ij}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Matrix addition: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+textbf A + 
+\backslash
+textbf B $
+\end_layout
+
+\end_inset
+
+ (add each element one at a time)
+\end_layout
+
+\begin_layout Standard
+Matrix multiplication: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+textbf A 
+\backslash
+textbf B$ ($
+\backslash
+text{cols}_A = 
+\backslash
+text{rows}_B$) $$
+\backslash
+textbf A 
+\backslash
+textbf B=
+\backslash
+left(
+\backslash
+sum_{z} a_{iz} b_{zj}
+\backslash
+right)_{ij}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Matrix transposition: make rows the columns 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+textbf{A}^T=(a_{ij} )_{ji}$$
+\end_layout
+
+\end_inset
+
+ Many operations can be easily written as matrices
+\end_layout
+
+\begin_layout Subsubsection
+Special Matrix Properties
+\end_layout
+
+\begin_layout Standard
+Identity matrix (diagonal values are 1, everything else is 0)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{align*} I = 
+\backslash
+begin{bmatrix} 1&
+\backslash
+cdots&0
+\backslash
+
+\backslash
+ 
+\backslash
+vdots&
+\backslash
+ddots&
+\backslash
+vdots
+\backslash
+
+\backslash
+ 0&
+\backslash
+cdots&1
+\backslash
+
+\backslash
+ 
+\backslash
+end{bmatrix} 
+\backslash
+end{align*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Matrix inverse: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$AA^{1}=I$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Matrix addition is commutative: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A + B = B + A$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Matrix multiplication is NOT commutative: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$AB 
+\backslash
+neq BA$ $(AB)^T=B^T A^T$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Dimension
+\end_layout
+
+\begin_layout Standard
+To indicate that an object is:
+\end_layout
+
+\begin_layout Itemize
+a scalar, we will use the notation 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$a 
+\backslash
+in R$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+a vector of length 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$n$
+\end_layout
+
+\end_inset
+
+, we will use 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+textbf a 
+\backslash
+in R^n$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+a vector of length 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k$
+\end_layout
+
+\end_inset
+
+, we will use 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$a 
+\backslash
+in R^k$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$r 
+\backslash
+times s$
+\end_layout
+
+\end_inset
+
+ matrix, we will use 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+textbf A 
+\backslash
+in R^{r 
+\backslash
+times s}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Subsection
+Application
+\end_layout
+
+\begin_layout Standard
+Model 1:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+widehat{income}=f(age)= 20000+5000 
+\backslash
+times age$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The unit of the intercept is different from the unit of the slope
+\end_layout
+
+\begin_layout Itemize
+Using matrix notation to make predictions for 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$age = 
+\backslash
+{20, 25, 40
+\backslash
+}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Represent model as a vector 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$b = 
+\backslash
+begin{pmatrix} 20000
+\backslash
+
+\backslash
+ 5000
+\backslash
+
+\backslash
+ 
+\backslash
+end{pmatrix}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Represent data as matrix 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$X$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Making predictions: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$X 
+\backslash
+times b$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Optimization
+\end_layout
+
+\begin_layout Standard
+Define the loss as a function of the model's parameters and we try to minize
+ it:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$ 
+\backslash
+widehat{
+\backslash
+Theta} = 
+\backslash
+arg 
+\backslash
+min_
+\backslash
+Theta L(
+\backslash
+Theta) $$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can find a minimum or maximum of a function by looking at the slope 
+\backslash
+newline Finding the mini mum of a function:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$ 
+\backslash
+frac{df(x)}{dx}=0 $$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In multiple dimensions it is called a gradient:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$ g = {
+\backslash
+begin{pmatrix} 
+\backslash
+frac{df(x_1)}{dx_1} 
+\backslash
+frac{df(x_2)}{dx_2} 
+\backslash
+cdots 
+\backslash
+frac{df(x_p)}{dx_p}
+\backslash
+
+\backslash
+ 
+\backslash
+end{pmatrix}}^T $$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Derivatives
+\end_layout
+
+\begin_layout Standard
+Definition of the derivative:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$ 
+\backslash
+frac{df(x)}{d(x)} 
+\backslash
+approx 
+\backslash
+lim
+\backslash
+limits_{
+\backslash
+Delta x 
+\backslash
+to 0} {
+\backslash
+frac {f(x+
+\backslash
+Delta x)-f(x)}{
+\backslash
+Delta x}} $$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Which means that the infinitesimal change in the function as the change
+ is taken to zero
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$i.e.$$ $$f_1(x) = a + xb$$ $$f_2(x) = x^2$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Common derivation rules
+\end_layout
+
+\begin_layout Standard
+Chain rule:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$ {
+\backslash
+textstyle 
+\backslash
+frac{dg(f(x)}{dx}= 
+\backslash
+frac{dg(f)}{f}
+\backslash
+frac{df(x)}{x}} $$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Other rules:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+frac{d(cf(x))}{dx}= c
+\backslash
+frac{df(x)}{dx}$ 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+quad 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+quad
+\backslash
+quad $
+\backslash
+frac{d(f(x)+g(x))}{dx}=
+\backslash
+frac{d(f(x))}{dx}+
+\backslash
+frac{g(g(x))}{dx}$ 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+quad 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+quad $
+\backslash
+frac{d(x^n)}{dx}=nx^{n-1}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Common properties:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+${
+\backslash
+displaystyle 
+\backslash
+frac{d(e^x)}{dx}= e^x}$ 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+${
+\backslash
+displaystyle 
+\backslash
+frac{d(
+\backslash
+log(x))}{dx}=
+\backslash
+frac{1}{x}}$ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Loss Function
+\end_layout
+
+\begin_layout Standard
+A common prediction function for probability values is the sigmoid:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+sigma(z)=
+\backslash
+frac{1}{1+e^{z}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Logistic regression has a loss function called 
+\emph on
+cross-entropy
+\emph default
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$l(z) = -y
+\backslash
+log(
+\backslash
+sigma(z)) - (1 - y)
+\backslash
+log(1 - 
+\backslash
+sigma(z))$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Probability
+\end_layout
+
+\begin_layout Subsection
+Set
+\end_layout
+
+\begin_layout Standard
+The collection of all possible outcomes in an experiment is called 
+\emph on
+sample space
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+For example:
+\end_layout
+
+\begin_layout Standard
+The sample space of any possible outcome for rolling a dice:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$ S = 
+\backslash
+{1, 2, 3, 4, 5, 6
+\backslash
+} $$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The sample space of any possib le outcome for flipping a coin:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$ S = 
+\backslash
+{head, tail
+\backslash
+} $$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Any function that follows the following axioms is a 
+\emph on
+probability distribution
+\end_layout
+
+\begin_layout Standard
+1.
+ Probability of any event is greater or equal to zero
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$p(A) 
+\backslash
+geq 0$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ If an event 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S$
+\end_layout
+
+\end_inset
+
+ is certain to occur, then:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$p(S) = 1$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ The probability of an infinite number of independent events 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A, B, C,
+\backslash
+ldots$
+\end_layout
+
+\end_inset
+
+ is the sum of the probability of each event:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$p(A) + p(B) + p(C) + 
+\backslash
+ldots$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Properties
+\end_layout
+
+\begin_layout Standard
+For event 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A$
+\end_layout
+
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$p(
+\backslash
+lnot{A}) = 1 - p(A)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For any two events 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A$
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$B$
+\end_layout
+
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$p(A 
+\backslash
+cup B) = p(A) + p(B) - p(A 
+\backslash
+cap B)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Conditional probability (probability of an event knowing that another event
+ is certain )
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$p(A 
+\backslash
+mid B) = P(A 
+\backslash
+cap B) / P(B)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Example: 
+\emph on
+The Monty Hall Problem
+\end_layout
+
+\begin_layout Subsection
+Distribution
+\end_layout
+
+\begin_layout Standard
+We only need to deal with two kinds of distributions:
+\end_layout
+
+\begin_layout Itemize
+Discrete distribution
+\end_layout
+
+\begin_layout Itemize
+Continues distribution
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Real variable
+\emph default
+: A random variable is a real-valued function that is defined on a sample
+ space of an experiment.
+ The distribution of a random variable is the probability of the events
+ underlying the random variable.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Support set
+\emph default
+: a set of conditions or restrains of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$x$
+\end_layout
+
+\end_inset
+
+ that makes 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$p(x) > 0$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+discrete random variable
+\emph default
+: the random variable 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$X$
+\end_layout
+
+\end_inset
+
+ can take on a finite number of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k$
+\end_layout
+
+\end_inset
+
+ different values 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$x_1, ...
+ x_k$
+\end_layout
+
+\end_inset
+
+ or, an infinite sequence of them.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+discrete probability distribution
+\emph default
+: Describes the probability of each real value 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$x$
+\end_layout
+
+\end_inset
+
+ of a discrete random variable:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$ p(X = x)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+sometimes denoted simply as 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$p(x)$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The sum of all events must sum up to 1:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+sum_x p(x) = 1$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$p$
+\end_layout
+
+\end_inset
+
+ is also call a 
+\emph on
+probability mass function
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+continuous random variables
+\emph default
+: Random variables that can take on every value on a bounded closed intervals
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$[a,b]$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$p(a 
+\backslash
+leq X 
+\backslash
+leq b) = 
+\backslash
+int_a^b p(x) dx$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+with properties:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$p(x) 
+\backslash
+geq 0$
+\end_layout
+
+\end_inset
+
+ for all 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$x$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+int_{-
+\backslash
+infty}^{
+\backslash
+infty}p(x) = 1$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+A single point in a continuous distribution has probability 0
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$p$
+\end_layout
+
+\end_inset
+
+ is called a 
+\emph on
+probability density function
+\end_layout
+
+\begin_layout Section*
+Common Statistics
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Expectation
+\emph default
+: A fancy way to express 
+\emph on
+average
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$E[f(x)] = 
+\backslash
+sum_x p(x) f(x) 
+\backslash
+quad E[f(x)] = 
+\backslash
+int_x p(x) f(x) dx $$ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Variance
+\emph default
+: The property describing how the data spread around the average of the
+ data set:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Var[f(x)] = E[ (f(x) - E[f(x)])^2 ]$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Covariance
+\emph default
+: Co-spread of two data set:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Cov(f(x), g(y)) = E[(f(x) - E[f(x)])(g(y) - E[g(y)])]$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+joint-distributions
+\emph default
+: The joint distribution of a set of random variables
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$p(X_1 
+\backslash
+in C_1, X_2 
+\backslash
+in C_2, 
+\backslash
+dots, X_k 
+\backslash
+in C_k)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+can be read as the probability that the random variables are simultaneously
+ in the intervals 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$C_1, 
+\backslash
+dots, C_k$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Marginal probability
+\emph default
+:
+\end_layout
+
+\begin_layout Standard
+From a simple example distribution
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$p(X_1 
+\backslash
+in C_1, X_2 
+\backslash
+in C_2)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+we can obtain the following
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$p(X_1 
+\backslash
+in C_1) = 
+\backslash
+sum_{x_2 
+\backslash
+in C_2} p(X_1 = x_1, X_2 = x_2)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+for a discrete distribution, and
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$p(X_1 
+\backslash
+in C_1) = 
+\backslash
+int_{x_2 
+\backslash
+in C_2} p(X_1 = x_1, X_2 = x_2) dx_2$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+for a continous distribution.
+\end_layout
+
+\begin_layout Standard
+This can be generalized for many variables.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Conditional probability
+\emph default
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$p(X_1 
+\backslash
+in C_1 
+\backslash
+mid X_2 
+\backslash
+in C_2) = 
+\backslash
+frac{p(X_1 
+\backslash
+in C_1 , X_2 
+\backslash
+in C_2)}{p(X_2 
+\backslash
+in C_2)} $$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Independence
+\emph default
+:If two random events are independent (they don't depend on each other),
+ their joint probability can be expressed as the factor of their distributions:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$p(X_1 
+\backslash
+in C_1, X_2 
+\backslash
+in C_2) = p(X_1 
+\backslash
+in C_1) p(X_2 
+\backslash
+in C_2)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document
