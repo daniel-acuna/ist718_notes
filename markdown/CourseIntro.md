@@ -31,7 +31,7 @@ Scriber: Lizhen Liang & Yimin Xiao  Lecture 1 ----- 1/15/2019
     
 
 ### 1.3 Focus
-![image0](image\0.png)
+![image0](https://github.com/sciosci/ist718_notes/blob/master/markdown/image/0.png)
 We will be focusing on diagnostic, descriptive and predictive aspects.
 
 ## 2. What is data science?
@@ -49,7 +49,7 @@ With the goal of using data to make decisions and drive actions, data science is
 - Domain Knowledge
 
 According to the Venn Diagram, data science is the overlapping area of hacking skills, math & statistics knowledge and domain knowledge:
-![image1](image\1.png)
+![image1](https://github.com/sciosci/ist718_notes/blob/master/markdown/image/1.png)
 
 ### 2.1 The “classic” and “new” kinds of data science
 
