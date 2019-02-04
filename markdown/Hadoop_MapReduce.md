@@ -4,15 +4,15 @@ Scriber: Lizhen Liang & Yimin Xiao
 
 ## Introduction to distributed system
 - A collection of independent computers that appear to the users as a single coherent system
-- It is a very old concept. It has been around since computers have been invented.
+- It is a very old concept. It has been around since computers were invented.
 - Advantages over simple system:
     - It has more processing power.
-    - It is cheaper since in old days, a company should purchase a bigger computer in order to get more processing power.
+    - It is cheaper since in old days, a company needed to purchase a bigger computer in order to get more processing power.
     - A distributed system could be more reliable if configured right.
     - It can grow incrementally.
 
-- disadvantages over simple system:
-    - It has more component to fail.
+- Disadvantages over simple system:
+    - It has more components to fail.
     - Needs customization.
     - Network could be the bottlenet.
     - The security issue could be very complicated.
@@ -21,18 +21,18 @@ Scriber: Lizhen Liang & Yimin Xiao
 ![](image/2.png)
 From a **storage perspective**, there are many goals for a distributed system.  
   - **Data Consistency**: all nodes have the same data at the same time.  
-  - **Data Availability**: assurances that every request can be processed.  
+  - **Data Availability**: assures that every request can be processed.  
   - **Partition Tolerance**: tolerates network failures, the system continues to operate.    
 
-**it is impossible to fulfill all three of the goals**  
-**The must important of the three goals**: partition tolerance, if the systems goes down, we still want to provide services.
+**it is impossible to fulfill all three of the goals, only two of them can be fulfilled at most**  
+**The most important of the three goals**: partition tolerance, if the systems goes down, we still want to provide services.
 
-## More component to fail
+## More components to fail
 ![](image/3.png)
-For example, if a job is seperated and assigned to different worker, since each of the worker has a certain possibility to fail the job, once one of the worker fail the job, the entire job fails, the job is more possible to fail if assigned to many people.  
+Consider a scenario where a job is seperated and assigned to different worker. Since each of the worker has a certain possibility to fail the job and if one of the worker fail the job, the entire job fails, the job is more likely to fail if assigned to many people.  
 
 **Solution**:  
-Redundancy / replication: assigned duplicated jobs to different workers.  
+Redundancy / replication: assigning duplicated jobs to different workers.  
 
 ## Hadoop
 the operating system for big data, meant to store big files. 
@@ -47,7 +47,7 @@ MapReduce process:
 - **Map**: takes an input element and produces a set of intermediate key/value pairs.
 - **Shuffle**: transfer output from mapper to reducer nodes with similar keys. Sicne network time is very expensive, we don’t do shuffle that much
 - **Reduce**: accepts an intermediate key and a pair of values for the same key and combines them into zero or one value.
-- **Combine**: output of reducer nodes into single output.
+- **Combine**: output of reduced nodes into single output.
 
 **Reduce function only takes two elements at one interation**:  
 - To save space on disk.
