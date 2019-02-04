@@ -6,12 +6,12 @@ Scriber: Lizhen Liang & Yimin Xiao
 **Jupyter notebook** is the main tool to use in IST718
 
 Modes:
-1. **Commend mode**
-    - Press esc to enter commend mode when in edit mode
-    - The edge of the cell will turn blue in commend mode
-    - Press a to add cell above or b to add cell below, press d twice to delete a cell 
-    - Press m to make the cell a markdown cell, press y to make the cell a ipython cell
-    - Press enter to enter edit mode in commend mode
+1. **Command mode**
+    - Press 'Esc' to enter command mode when from edit mode
+    - The edge of the cell will turn blue in command mode
+    - Press 'A' to add cell above or 'B' to add cell below, press 'D' twice to delete a cell 
+    - Press 'M' to make the cell a markdown cell, press 'Y' to make the cell a ipython cell
+    - Press 'Enter' to enter edit mode from command mode
 2. **Edit mode**
     - Press enter to enter edit mode in commend mode
     - The edge of the cell will turn green in edit mode
@@ -50,10 +50,10 @@ def is_prime(n):
 ```
 ### Comprehensions
 A list comprehension consists of the following parts:
-  - An Input Sequence.
-  - A Variable representing members of the input sequence.
-  - An Optional Predicate expression.
-  - An Output Expression producing elements of the output list from members of the Input Sequence that satisfy the predicate.
+  - An **Input Sequence**.
+  - A **Variable** representing members of the input sequence.
+  - An **Optional Predicate Expression**.
+  - An **Output Expression** producing elements of the output list from members of the Input Sequence that satisfy the predicate.
 
 ## Numpy, Pandas and Matplotlib and other packages
 
@@ -84,10 +84,10 @@ a.sum()
 **Normalization / regularization**: mapping all the elements to between 0 and 1
 
 **Convoluted way to compute the pi**
-Given a circle with radius R = 0.5:  
-Throw dots in the a one by one square that includes the given circle.  
-To check if a dot isin the circle or not: if the distance from dot to (0, 0) is greater than 1, then the dot is outside the circle.  
-The propotion between the dots inside the circle and inside the square equals to pi / 4.  
+Given a circle with radius R = 1:  
+Throw dots into a one by one square that includes the given circle.  
+To check if a dot is in the circle or not: if the distance from the dot to (0, 0) is greater than 1, then the dot is outside the circle.  
+The proportion between the dots inside the circle and inside the square equals to pi / 4.  
 With more dots, we can get a more accurate calcutation of pi.
 
 
@@ -97,6 +97,7 @@ import pandas as pd
 ```
 **Store "spreadsheet" with names for columns and different datatype**
 The creator of Pandas created Pandas mostly in order to implement time series functions, so time series is the part where Pandas really shines.
+
 Basic data structure
 - `Series(labeled list, column)`
 - `DataFrame(table)`
@@ -104,12 +105,13 @@ Basic data structure
 Types: `pd.DataFrame()`, `pd.Timestamp()`, `pd.Series()`, `pd.Categorical()`, etc.   
 
 Locate an element: `df.loc(row name, column name)` or `df.iloc(row index, column index)`
+
 Axis:
 - Axis = 0: do by column; 
 - Axis = 1: do by row;
 - Default = 0
 
-`Df.apply()`: apply a function(arbitrary) to the whole column  
+`Df.apply()`: apply a function (arbitrary) to the whole column  
 **Applymap**: apply to all the cells  
 **Plotting**: `pd.plot(x=‘’, y=‘’, kind=’scatter')`  
 
