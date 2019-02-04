@@ -48,7 +48,7 @@ With the goal of using data to make decisions and drive actions, data science is
 
 - Domain Knowledge
 
-Using the Venn Diagram, we can depict data science as the overlapping area of hacking skills, math & statistics knowledge and domain knowledge:
+According to the Venn Diagram, data science is the overlapping area of hacking skills, math & statistics knowledge and domain knowledge:
 ![image1](https://github.com/sciosci/ist718_notes/blob/master/markdown/image/1.png)
 
 ### 2.1 The “classic” and “new” kinds of data science
