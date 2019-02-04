@@ -84,10 +84,10 @@ a.sum()
 **Normalization / regularization**: mapping all the elements to between 0 and 1
 
 **Convoluted way to compute the pi**
+
 Given a circle with radius R = 1:
 Throw dot into a one by one square that includes the given circle.
-To check if a dot is in the circle or not: if the distance from the dot to point (0,0) is greater than 1, them the dot is outside the circle. The proportion between the dots inside the circle and the area of the inside the square equals to pi / 4.  
-With more dots, we can get a more accurate calcutation of pi.
+To check if a dot is in the circle or not: if the distance from the dot to point (0,0) is greater than 1, them the dot is outside the circle. The proportion between the dots inside the circle and the area of the inside the square equals to pi / 4. With more dots, we can get a more accurate calcutation of pi.
 
 
 ### Pandas
