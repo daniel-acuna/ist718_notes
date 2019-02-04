@@ -8,7 +8,7 @@ Scriber: Lizhen Liang & Yimin Xiao  Lecture 1 ----- 1/15/2019
 
 ### 1.1 Objectives
 
--   Develop predictive models that are interptrable.
+-   Develop predictive models that are interpretable.
     
 -   Understand oppotunities / challenges of big data.
     
@@ -21,7 +21,7 @@ Scriber: Lizhen Liang & Yimin Xiao  Lecture 1 ----- 1/15/2019
 
 ### 1.2 Course content
 
--   1 / 4 of the course covers prerequisite skills required for big data analytics: python programming, linear algebra, calculus and statistics.
+-   1 / 4 of the course covers prerequisite skills for big data analytics: python programming, linear algebra, calculus and statistics.
     
 -   1 / 4 of the course covers the Spark and Hadoop, providing skills required to perform big data analytics.
     
@@ -32,7 +32,7 @@ Scriber: Lizhen Liang & Yimin Xiao  Lecture 1 ----- 1/15/2019
 
 ### 1.3 Focus
 ![image0](https://github.com/sciosci/ist718_notes/blob/master/markdown/image/0.png)
-We will be focusing on diagnostic, descriptive and predictive aspects.
+We will be focusing on the diagnostic, descriptive and predictive aspects.
 
 ## 2. What is data science?
 
@@ -48,7 +48,7 @@ With the goal of using data to make decisions and drive actions, data science is
 
 - Domain Knowledge
 
-According to the Venn Diagram, data science is the overlapping area of hacking skills, math & statistics knowledge and domain knowledge:
+Using the Venn Diagram, we can depict data science as the overlapping area of hacking skills, math & statistics knowledge and domain knowledge:
 ![image1](https://github.com/sciosci/ist718_notes/blob/master/markdown/image/1.png)
 
 ### 2.1 The “classic” and “new” kinds of data science
@@ -63,9 +63,9 @@ Models that are used for the new kind of data science are generally black boxes:
 
 According to a study given by Andrew Ng and Michael I. Jordon, when the dataset is small, a simpler model has smaller error rate than a more complicated model. But when the size of a dataset gets bigger, the error rate of the more complicated model is smaller than the simpler model.
 
-Big data means data with large volume, fast velocity and complex data variety(“three V” for big data).
+Big data means data with large volume, fast velocity and complex data variety (“three V” for big data).
 
-Since big data are usually too big to store on a single system, too fast to be pocessed by a single computer and too complex for traditional processing techniques, big data are usually stored and processed on a distributed system.
+Since big data are usually too big to store on a single system, too fast to be processed by a single computer and too complex for traditional processing techniques, big data are usually stored and processed on a distributed system.
 
 ## 4 Example for big data applications
 
