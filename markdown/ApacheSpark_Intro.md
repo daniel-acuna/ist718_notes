@@ -147,7 +147,7 @@ wordCounts.take(10)
   - Operations are symbolic, meaning they hold *literal* values, and *placeholder* columns
   - Some operations can't take strings, only accept a literal or placeholder as a value (i.e. Exponents)
   - Some operations (`fn.sum`, `fn.stddev`, `fn.count`, `fn.countdistinct`) only work on grouped data; applied using `agg(operation)`
-  - Can sample from DataFrame and output result as Pandas, can also perform random number generation using  `.sample` and `spark.range`
+  - Can sample from DataFrame and output result as Pandas using `.sample`, can also perform random number generation using `spark.range`
     - **Important to have training, testing, and validating datasets when sampling**
 #### DataFrame Example ####
 ```python
