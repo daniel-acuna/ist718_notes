@@ -29,7 +29,7 @@ From a **storage perspective**, there are many goals for a distributed system.
 
 ## More components to fail
 ![](image/3.png)
-Consider a scenario where a job is seperated and assigned to different worker. Since each of the worker has a certain possibility to fail the job and if one of the worker fail the job, the entire job fails, the job is more likely to fail if assigned to many people.  
+Consider a scenario where a job is seperated and assigned to different workers. Since each of the workers has a certain probability to fail the job, and if one of the workers fails the job, the entire job fails, the job is more likely to fail if assigned to many people.  
 
 **Solution**:  
 Redundancy / replication: assigning duplicated jobs to different workers.  
