@@ -1,0 +1,11 @@
+#Introduction to Apache Spark
+Scriber: Christy Sato
+
+##Data Science Cycle
+-As part of the data science cycle, we need Spark for the following:
+    - Data Understanding
+    - Data Preperation
+    - Modeling
+    - Evaluation
+    - Deployment
+    
