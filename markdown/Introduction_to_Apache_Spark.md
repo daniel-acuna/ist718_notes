@@ -1,5 +1,6 @@
 # Introduction to Apache Spark
 Lecturer: Prof. Daniel Acuña https://acuna.io
+
 Scriber: Chun Xie
 
 ### before data modeling, do not forget to
@@ -100,6 +101,7 @@ def map_func(row):
     return [row[0], row[2]]
 dataset_rdd.take(3)
 dataset_rdd.map(map_func).take(5)
+
 # 2 - Reduce to count the number of orders per month
 def reduce_func(value1, value2):
     return value1 + value2
@@ -153,14 +155,14 @@ print("large_values", large_values.collect())
 
 ### Use bash in Jupyter Notebook
 
-```python
+```bash
 %%bash
 cat /tmp/large_values.txt/part-00006
 ```
 
 ### WordCount in Spark
 
-*The character \ makes you connect your lines safely.*
+*The character '\' makes you connect your lines safely.*
 
 ```python
 wordCounts = shakespeare.flatMap(lambda line: line.lower().split()).\
@@ -173,8 +175,6 @@ wordCounts.take(10)
 ### Join operations
 
 **Cartesian Product** between two sets
-
-$$A \times B=\{(a,b) \mid a \in A \wedge b \in B\}$$
 
 ```python
 A = sc.parallelize([(1, 1), (1, 2), (2, 3)])
@@ -214,7 +214,7 @@ transactions_df = spark.createDataFrame([
 ])
 ```
 
-Select
+##### Select
 
 ```python
 locations_df.\
@@ -227,13 +227,13 @@ locations_df.\
     show(10)
 ```
 
-Join
+##### Join
 
 ```python
 new_df = locations_df.join(transactions_df, on='location_id')
 ```
 
-Groupby and aggregate
+##### Groupby and aggregate
 
 ```python
 locations_df.join(transactions_df, on='location_id').\
