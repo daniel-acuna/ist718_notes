@@ -1,4 +1,5 @@
 # Introduction to Apache Spark
+
 Lecturer: Prof. Daniel Acuña https://acuna.io
 
 Scriber: Chun Xie
