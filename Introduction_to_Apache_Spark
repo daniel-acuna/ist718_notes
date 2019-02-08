@@ -43,7 +43,7 @@ Scriber: Christy Sato
 -Spark 2.0+ can run joins and queries on high level data types
 
 ##Spark RDDs
-(insert photo here)
+![](ist718_notes/Doc Feb 07, 2019, 2028.pdf)
 - **Lineage**:
   - Information about how an RDD was derived from other datasets or other RDDs.
   - RDD is not necessarily materialized all the time.
