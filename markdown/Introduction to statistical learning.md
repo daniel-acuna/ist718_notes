@@ -70,20 +70,11 @@ x, y ~ p( )
 # How do we perform MLE
 ## The probability of over Gaussian distribution
 ### Example: Age distribution
-* Assumption: age is sample from probability ot distribution of some parameters
+
 <p align="center">    
-<img src="https://github.com/yueyue-wang/ist718_notes/blob/master/markdown/image/stat_l_02.png" width=30%>
+<img src="https://github.com/yueyue-wang/ist718_notes/blob/master/markdown/image/stat_l_0.png" width=120%>
 </p>
 
-* Further assumption: age is sample of normal distribution
-<p align="center">    
-<img src="https://github.com/yueyue-wang/ist718_notes/blob/master/markdown/image/stat_l_03.png" width=30%>
-</p>
-
-* Goal: maxmize the probability. We will use the Maximum Likelihood Estimation (MLE):
-<p align="center">    
-<img src="https://github.com/yueyue-wang/ist718_notes/blob/master/markdown/image/stat_l_04.png" width=30%>
-</p>
 
 #### Age dataset and assumptions
 <p align="center">    
