@@ -1,4 +1,4 @@
-## Scriber: Xuehan Chen
+## Scriber: Xuehan Chen, Yue Wang
 
 # Spark
 ## Spark ML:Transformers and Estimators
@@ -62,10 +62,76 @@ x, y ~ p( )
 <img src="https://github.com/samantha96/ist718_notes/blob/master/markdown/image/MLE.png" width=30%>
 </p>
 
+# Goal of Statistical Learning
+<p align="center">    
+<img src="https://github.com/yueyue-wang/ist718_notes/blob/master/markdown/image/stat_l_01.png" width=100%>
+</p>
 
+# How do we perform MLE
+## The probability of over Gaussian distribution
+### Example: Age distribution
+* Assumption: age is sample from probability ot distribution of some parameters
+<p align="center">    
+<img src="https://github.com/yueyue-wang/ist718_notes/blob/master/markdown/image/stat_l_02.png" width=30%>
+</p>
 
+* Further assumption: age is sample of normal distribution
+<p align="center">    
+<img src="https://github.com/yueyue-wang/ist718_notes/blob/master/markdown/image/stat_l_03.png" width=30%>
+</p>
 
+* Goal: maxmize the probability. We will use the Maximum Likelihood Estimation (MLE):
+<p align="center">    
+<img src="https://github.com/yueyue-wang/ist718_notes/blob/master/markdown/image/stat_l_04.png" width=30%>
+</p>
 
+#### Age dataset and assumptions
+<p align="center">    
+<img src="https://github.com/yueyue-wang/ist718_notes/blob/master/markdown/image/stat_l_5.png" width=100%>
+</p>
 
+#### logarithm transformation
+<p align="center">    
+<img src="https://github.com/yueyue-wang/ist718_notes/blob/master/markdown/image/stat_l_6.png" width=120%>
+</p>
 
+<p align="center">    
+<img src="https://github.com/yueyue-wang/ist718_notes/blob/master/markdown/image/stat_l_07.png" width=100%>
+</p>
 
+#### LL:
+<p align="center">    
+<img src="https://github.com/yueyue-wang/ist718_notes/blob/master/markdown/image/stat_l_8.png" width=120%>
+</p>
+
+# How do we perform MLE
+## The probability of over logistic regression
+In classcification, we assume that the data is generated with discrete probability distribution because y takes on discreate values
+For the two-class logistic regression for classification
+- One of the simplest models for classification
+- It makes use of the Bernoulli probability distribution
+
+<p align="center">    
+<img src="https://github.com/yueyue-wang/ist718_notes/blob/master/markdown/image/stat_l_9.png" width=30%>
+</p>
+
+### Example: two-class logistic regression for classification
+<p align="center">    
+<img src="https://github.com/yueyue-wang/ist718_notes/blob/master/markdown/image/stat_l_10-0.png" width=100%>
+</p>
+
+<p align="center">    
+<img src="https://github.com/yueyue-wang/ist718_notes/blob/master/markdown/image/stat_l_10.png" width=100%>
+</p>
+
+<p align="center">    
+<img src="https://github.com/yueyue-wang/ist718_notes/blob/master/markdown/image/stat_l_10-2.png" width=30%>
+</p>
+
+<p align="center">    
+<img src="https://github.com/yueyue-wang/ist718_notes/blob/master/markdown/image/stat_l_11.png" width=100%>
+</p>
+
+<p align="center">    
+<img src="https://github.com/yueyue-wang/ist718_notes/blob/master/markdown/image/stat_l_12.png" width=100%>
+</p>
