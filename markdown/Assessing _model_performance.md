@@ -47,8 +47,8 @@ How do we evaluate the model, how to get the best model is what we are going to 
 
 
 # Overfitting vs Underfitting
-- **bias**: how far are the predicted values from the actual values. If the average predicted values are far off from the actual values then the bias is high
-- **variance**: Variance occurs when the model performs good on the trained dataset but does not do well on a dataset that it is not trained on, like a test dataset or validation dataset. Variance tells us how scattered are the predicted value from the actual value.
+- **bias**: the difference between predicted values and the true (actual) values
+- **variance**: how much of the spread of predicted value from the actual values
 <img src="https://raw.githubusercontent.com/NormanQC/Assessing_model_performance_2-20/master/overfitting.PNG" width=60%>
 
 #### overfitting: low bias but high variance
