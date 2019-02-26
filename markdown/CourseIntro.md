@@ -31,7 +31,7 @@ Scriber: Lizhen Liang & Yimin Xiao  Lecture 1 ----- 1/15/2019
     
 
 ### 1.3 Focus
-![image0](https://github.com/sciosci/ist718_notes/blob/master/markdown/image/0.png)
+![image0](image/0.png)
 We will be focusing on the diagnostic, descriptive and predictive aspects.
 
 ## 2. What is data science?
