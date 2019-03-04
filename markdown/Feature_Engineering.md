@@ -32,7 +32,7 @@ whereas some are non numeric. Most algorithms work with numeric data so it can b
 
 Consider a simple regression equation:
 
-![image](image/unit07formula1.png)
+![image](image/unit07formula1.PNG)
 
 - AUC = 0.75  
 
@@ -66,7 +66,7 @@ A way to bring all the parameters on the same scale is to standardize it. This i
 
 ## Scaled model
 
-![image](image/unit07formula1.png)
+![image](image/unit07formula1.PNG)
 
 - AUC = 0.75 (same)  
 
