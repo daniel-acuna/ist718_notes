@@ -22,9 +22,7 @@
 - Reducing the number of random variables by obtaining a set of principal variables, while trying to maintain structure/properties of the original data.
 
 
-<center><img src="IST 718 image12.PNG" width="50%" align="center"></center>  
-
-$$V(n)=\frac{\pi^{\frac{n}{2}}}{\Gamma\left(\frac{n}{2} + 1 \right)}$$
+![image](image/USL1.png)
 
 
 - As we increase the dimensions, volume increases as well.
@@ -38,14 +36,8 @@ $$V(n)=\frac{\pi^{\frac{n}{2}}}{\Gamma\left(\frac{n}{2} + 1 \right)}$$
 - Therefore, we need to be able to calculate the distance between two vectors/elements.
 
 - Typical distances between vectors:
-  - Euclidian:  
-  $$d(v,w) = \sum(v_i-w_i)^2$$  
   
-  - Manhattan distance:  
-  $$d(v,w) = \sum \mid v_i-w_i \mid$$  
-  
-  - Cosine distance:  
-  $$d(v,w)=\frac{v \cdot w}{\|v\|\|w\|}=\frac{\sum v_iw_i}{\sqrt(\sum v_i^2) \sqrt(\sum w_i^2)}$$
+  ![image](image/USL2.png)
 
 ### Principal Component Analysis:
 
@@ -55,10 +47,13 @@ $$V(n)=\frac{\pi^{\frac{n}{2}}}{\Gamma\left(\frac{n}{2} + 1 \right)}$$
 - When performing PCA, data has to be centered
 
 
-PCA Constraint:   $$\sum\phi_{i1}^2 = 1 \quad\text{and}\quad x'_i = x_i - \overline{x}_i$$
+PCA Constraint:   
+
+![image](image/USL10.png)
+
 - Otherwise we could increase the variance captured infinitively 
 
-<center><img src="IST718_image1.png" width="50%" align="center"></center>  
+![image](image/USL0.png) 
 
 
    <center> + -> Positive projections </center>  
@@ -82,8 +77,7 @@ $$\text{var}(Z_1) > \text{var}(Z_2) > \cdots >\text{var}(Z_m)$$
 
 - Dataset: 400 datapoints, 10 features
   
-<br>
-<center><img src="ISt 718 image2.PNG" width="100%" align="center"></center>
+![image](image/USL3.png)
     
  
 
@@ -98,14 +92,13 @@ $$\text{var}(Z_1) > \text{var}(Z_2) > \cdots >\text{var}(Z_m)$$
 - Furthermore, we notice that BMI as well as age have relatively high absolute values/loadings
 - We could categorize the most highest loadings into a new class called "health"
 
-<center>$Z_1 = \phi_{11}x'_1 + \phi_{21}x'_2 + \cdots + \phi_{m1}x'_m$ </center>
-<center>$Z_1 = -0.48 * age - 0.36* sex - 0.51 * bmi - 0.60 * glu$</center>
+![image](image/USL4.png)
 
 ##### 2nd Principal Component:
 - Biggest absolute value and, thus, most relevant for principal component one is sex/gender
 - We also notice that the featues most dominant in PC1 are less dominant in PC1
 
-<center>$Z_2 = -0.17 * age - 0.80* sex - 0.53 * bmi - 0.17 * glu$</center>
+![image](image/USL5.png)
     
 
 
@@ -123,8 +116,7 @@ $$\text{var}(Z_1) > \text{var}(Z_2) > \cdots >\text{var}(Z_m)$$
 
 ### How do we know how many principal components to select ? 
 
-<br>
-<center><img src="IST 718 image3.PNG" width="70%" align="center"></center>
+![image](image/USL6.png)
 
 - Select the elbow point
     - In other words, select the point where the additional/margina varianced gained becomes minimal
@@ -144,4 +136,4 @@ $$\text{var}(Z_1) > \text{var}(Z_2) > \cdots >\text{var}(Z_m)$$
     - Distance between different clusters, however, should be large
     
     
-<center><img src="IST 718 image4.PNG" width="70%" align="center"></center>
+![image](image/USL7.png)
